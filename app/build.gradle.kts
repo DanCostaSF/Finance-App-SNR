@@ -33,6 +33,22 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    flavorDimensions += "environment"
+    productFlavors {
+        create("local") {
+            dimension = "environment"
+            applicationIdSuffix = ".local"
+            versionNameSuffix = "-local"
+        }
+
+        create("remote") {
+            dimension = "environment"
+            applicationIdSuffix = ".remote"
+            versionNameSuffix = "-remote"
+        }
+    }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
