@@ -2,9 +2,8 @@ package br.com.snr.financeappsnr.di
 
 import org.koin.dsl.module
 
-object FinanceDI {
-
+object DataModule {
     val module = module {
-
+        //TODO: adicionar dependencia do repositorio local aqui
     }
 }

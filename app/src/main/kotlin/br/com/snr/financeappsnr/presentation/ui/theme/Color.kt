@@ -1,4 +1,4 @@
-package br.com.snr.financeappsnr.ui.theme
+package br.com.snr.financeappsnr.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
