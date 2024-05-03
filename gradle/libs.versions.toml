@@ -1,6 +1,7 @@
 [versions]
 agp = "8.3.1"
-koinAndroid = "3.1.5"
+koinAndroid = "3.4.2"
+koinCoroutines = "3.4.1"
 kotlin = "1.9.0"
 coreKtx = "1.12.0"
 junit = "4.13.2"
@@ -28,6 +29,26 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinAndroid" }
+koinCoroutines = { module = "io.insert-koin:koin-core-coroutines", version.ref = "koinCoroutines" }
+
+[bundles]
+
+debugLibs = [
+    "androidx-ui-tooling", "androidx-ui-test-manifest",
+]
+
+testLibs = [
+    "junit"
+]
+
+androidTestLibs = [
+    "androidx-junit", "androidx-espresso-core", "androidx-ui-test-junit4",
+]
+
+commonLibs = [
+    "androidx-core-ktx", "androidx-navigation-compose", "androidx-lifecycle-runtime-ktx", "androidx-activity-compose", "androidx-ui", "androidx-ui-graphics","androidx-ui-tooling-preview",
+    "androidx-material3", "koin-android", "koinCoroutines"
+]
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
